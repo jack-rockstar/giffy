@@ -1,6 +1,5 @@
 import {API_KEY, API_URL} from './setting'
 
-const api_key='j86psBGvCtZqU8OWB1pUij1eaFv46KrG'
 
 const fromApiResponseGifs=apiResponse =>{
     const {data=[]}=apiResponse
@@ -22,3 +21,8 @@ export default async function getGifs({limit=20, keyword='morty' , page=0 }={}) 
     const apiResponse = await res.json()
     return fromApiResponseGifs(apiResponse)
 }
+
+//PROD
+//https://giffy-omega-orcin.vercel.app/search/rick
+//DES
+//https://giffy-jack-rockstar.vercel.app/search/saturday%20morning
